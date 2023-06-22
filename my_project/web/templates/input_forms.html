@@ -1,0 +1,67 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        form{
+            margin: 15px;
+        }
+    </style>
+    <title>Hello</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="mb-3 row">
+        <label for="inputDescription" class="col-sm-1 col-form-label">First number: </label>
+        <div class="col-sm-5">
+            <input type="number" class="form-control" id="inputDescription" name="numbers" required>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputDescription" class="col-sm-1 col-form-label">Second number:</label>
+        <div class="col-sm-5">
+            <input type="number" class="form-control" id="inputDescription" name="numbers" required>
+        </div>
+    </div>
+
+
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault1" value="add" checked>
+      <label class="form-check-label" for="flexRadioDefault1">
+        add
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault2" value="subtract">
+      <label class="form-check-label" for="flexRadioDefault2">
+        subtract
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault3" value="multiply">
+      <label class="form-check-label" for="flexRadioDefault3">
+        multiply
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault4" value="divide">
+      <label class="form-check-label" for="flexRadioDefault4">
+        divide
+      </label>
+    </div>
+    <input type="submit" value="Send"></input>
+</form>
+
+</body>
+</html>
